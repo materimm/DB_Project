@@ -45,4 +45,3 @@ CREATE TABLE Housing (
 	FOREIGN KEY(BuildingID) REFERENCES Buildings(BuildingID),
 	FOREIGN KEY(ResAdID) REFERENCES ResidentAdvisors(ResAdID)
 )Engine=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
-
