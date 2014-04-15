@@ -4,6 +4,8 @@
 CREATE TABLE Buildings (
 	BuildingID int(10) NOT NULL AUTO_INCREMENT,	
 	Name varchar(50) NOT NULL, 
+	NumberFloors int(10) DEFAULT NULL,
+	ApartmentNumber int(10) DEFAULT NULL,
 	PRIMARY KEY(BuildingID)
 )Engine=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1; 
 
@@ -21,7 +23,7 @@ CREATE TABLE ResidentAdvisors (
 	ResAdID int(10) NOT NULL AUTO_INCREMENT,
 	StudentID int(10) NOT NULL,
 	BuildingID int(10) NOT NULL,
-	FloorNumber int(10) NOT NULL,
+	FloorNumber int(10) DEFAULT NULL,
 	PRIMARY KEY(ResAdID),
 	FOREIGN KEY(StudentID) REFERENCES Students(StudentID),
 	FOREIGN KEY(BuildingID) REFERENCES Buildings(BuildingID)
