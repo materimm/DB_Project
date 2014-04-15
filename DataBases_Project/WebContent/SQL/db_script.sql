@@ -1,4 +1,5 @@
 -- source C:\Users\Morey\workspace\Databases_Project\WebContent\SQL\db_script.sql
+-- source C:\Users\Owner\workspace\DataBases_Project\WebContent\SQL\db_script.sql
 
 CREATE TABLE Buildings (
 	BuildingID int(10) NOT NULL AUTO_INCREMENT,	
