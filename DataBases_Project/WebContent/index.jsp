@@ -11,22 +11,8 @@
 <title>Database Project</title>
 </head>
 <body>
-	<h2>Buildings</h2>
-	<form id="HousingSearch" action="HousingSearch" method="GET">
-		<jsp:useBean id="bg" class="utils.BuildingGetter"/>
-		<c:set var="buildings" value="${bg.getMap()}"/>
-		<c:set var="numFloors" value="${bg.getVec()}"/>
-		<select name="build">
-			<option value=0></option>
-			<c:forEach items="${buildings}" var="entry">
-				<option value= "${entry.key}" >${entry.value}</option>
-			</c:forEach>
-		</select>
-		<input type="submit" value="Search"/>
-		
-		<c:forEach items="${firstNames}" var="fn">
-			<p>${fn}</p>
-		</c:forEach>
-	</form>
+	<a href="jsp/housing.jsp">Housing</a><br>
+	<a href="jsp/addStudent.jsp">Add Student</a><br>
+	<a href="jsp/showRAs.jsp">Show RAs</a><br>
 </body>
 </html>

@@ -22,7 +22,6 @@ public class HousingSearch extends HttpServlet
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		int buildingID = Integer.parseInt(request.getParameter("build"));
-		System.out.println("ID: " + buildingID);
 		Vector<Integer> sIDs = new Vector<Integer>();
 		Vector<String> firstName = new Vector<String>();
 		Vector<String> lastName = new Vector<String>();
@@ -53,7 +52,6 @@ public class HousingSearch extends HttpServlet
 			
 			request.setAttribute("firstNames", firstName);
 			request.setAttribute("lastNames", lastName);
-			request.setAttribute("message", "IT WORKS");
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 			
 			reader.close();	

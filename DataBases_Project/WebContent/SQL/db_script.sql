@@ -46,5 +46,6 @@ CREATE TABLE Housing (
 	PRIMARY KEY(StudentID),
 	FOREIGN KEY(StudentID) REFERENCES Students(StudentID),
 	FOREIGN KEY(BuildingID) REFERENCES Buildings(BuildingID),
+	FOREIGN KEY(RoomMateID) REFERENCES Students(StudentID),
 	FOREIGN KEY(ResAdID) REFERENCES ResidentAdvisors(ResAdID)
 )Engine=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
