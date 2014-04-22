@@ -13,7 +13,9 @@
 <body>
 	<jsp:useBean id="rag" class="utils.RAGetter"/>
 	<c:set var="ras" value="${rag.getRAs()}"/>
-	<table>
+	<div class="table-reponsive">
+	<table class="table table-bordered table-striped">
+
 		<tr>
 			<th>Building</th>
 			<th>RA Name</th>
@@ -29,6 +31,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</div>
 
 
 </body>
