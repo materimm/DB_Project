@@ -52,7 +52,7 @@ public class HousingSearch extends HttpServlet
 			
 			request.setAttribute("firstNames", firstName);
 			request.setAttribute("lastNames", lastName);
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			request.getRequestDispatcher("jsp/housing.jsp").forward(request, response);
 			
 			reader.close();	
 			

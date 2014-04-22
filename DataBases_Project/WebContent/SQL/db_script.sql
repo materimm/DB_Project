@@ -5,6 +5,7 @@ CREATE TABLE Buildings (
 	BuildingID int(10) NOT NULL AUTO_INCREMENT,	
 	Name varchar(50) NOT NULL, 
 	NumberFloors int(10) DEFAULT NULL,
+	RoomNumber int(10) DEFAULT NULL,
 	ApartmentNumber int(10) DEFAULT NULL,
 	PRIMARY KEY(BuildingID)
 )Engine=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1; 
