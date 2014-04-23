@@ -25,4 +25,12 @@
     <servlet-name>StudentAdd</servlet-name>
     <url-pattern>/StudentAdd</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>RemoveStudent</servlet-name>
+    <servlet-class>servlets.RemoveStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveStudent</servlet-name>
+    <url-pattern>/RemoveStudent</url-pattern>
+  </servlet-mapping>
 </web-app>

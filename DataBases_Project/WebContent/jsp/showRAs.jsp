@@ -11,6 +11,7 @@
 <title>RAs</title>
 </head>
 <body>
+	<a href="../index.jsp">Home</a><br> <br>
 	<jsp:useBean id="rag" class="utils.RAGetter"/>
 	<c:set var="ras" value="${rag.getRAs()}"/>
 	<div class="table-reponsive">

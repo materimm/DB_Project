@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.util.Vector;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,8 +24,7 @@ public class HousingSearch extends HttpServlet
 	{
 		int buildingID = Integer.parseInt(request.getParameter("build"));
 		Vector<Integer> sIDs = new Vector<Integer>();
-		Vector<String> firstName = new Vector<String>();
-		Vector<String> lastName = new Vector<String>();
+		Vector<String> name = new Vector<String>();
 		
 		//PrintWriter out = response.getWriter();
 		DBReader reader = new DBReader();
@@ -44,15 +44,25 @@ public class HousingSearch extends HttpServlet
 				rs = reader.executeQuery(query);
 				if(rs.next())
 				{
-					firstName.add(rs.getString("FirstName"));
-					lastName.add(rs.getString("LastName"));
+					String f = rs.getString("FirstName");
+					String l = rs.getString("LastName");
+					String t = f + " " + l;
+					name.add(t);
 				}
 			}
 			
+			/*request.getSession().removeAttribute("errorMessage");
+            request.getRequestDispatcher("jsp/housing.jsp").forward(request, response);
+            request.getSession().setAttribute("firstnames", "test");
+            response.sendRedirect(request.getHeader("Referer"));*/
 			
-			request.setAttribute("firstNames", firstName);
+			request.setAttribute("firstNames", name);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/housing.jsp");
+			dispatcher.forward(request, response);
+			
+			/*request.setAttribute("firstNames", firstName);
 			request.setAttribute("lastNames", lastName);
-			request.getRequestDispatcher("jsp/housing.jsp").forward(request, response);
+			request.getRequestDispatcher("jsp/housing.jsp").forward(request, response);*/
 			
 			reader.close();	
 			

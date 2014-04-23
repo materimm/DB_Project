@@ -12,8 +12,9 @@
 <title>Database Project</title>
 </head>
 <body>
-	<a href="jsp/housing.jsp">Housing</a><br>
 	<a href="jsp/addStudent.jsp">Add Student</a><br>
+	<a href="jsp/housing.jsp">Housing</a><br>
+	<a href="jsp/removeStudent.jsp">Remove Student</a><br>
 	<a href="jsp/showRAs.jsp">Show RAs</a><br>
 </body>
 </html>
