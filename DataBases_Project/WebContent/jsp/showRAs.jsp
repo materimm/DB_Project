@@ -12,7 +12,7 @@
 </head>
 <body>
 	<a href="../index.jsp">Home</a><br> <br>
-	<jsp:useBean id="rag" class="utils.RAGetter"/>
+	<jsp:useBean id="rag" class="utils.RADAO"/>
 	<c:set var="ras" value="${rag.getRAs()}"/>
 	<div class="table-reponsive">
 	<table class="table table-bordered table-striped">
@@ -24,11 +24,12 @@
 			<th>Room Number</th>
 		</tr>
 		<c:forEach items="${ras}" var="ra">
+			<c:set var="st" value="${ra.getStudent()}"/>
 			<tr>
-				<td>${ra.getBuildingName()}</td>
-				<td>${ra.getName()}</td>
-				<td>${ra.getFloorNum()}</td>
-				<td>${ra.getRoomNum()}</td>
+				<td>${ra.buildingName}</td>
+				<td>${st.firstName} ${st.lastName}</td>
+				<td>${ra.floorNum}</td>
+				<td>${ra.roomNum}</td>
 			</tr>
 		</c:forEach>
 	</table>

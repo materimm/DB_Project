@@ -1,52 +1,24 @@
 package ra;
 
+import student.Student;
+
 public class ResidentAdvisor 
 {
-	int studentID;
-	int resAdID;
-	String name;
-	int buildingID;
-	String buildingName;
-	int floorNum;
-	int roomNum;
-	int gradYear;
-	String major;
+	public int resAdID;
+	public int buildingID;
+	public String buildingName;
+	public int floorNum;
+	public int roomNum;
+	public Student st;
 	
 	public ResidentAdvisor()
 	{
-		studentID = -1;
 		resAdID = -1;
-		name = "n/a";
 		buildingID = -1;
 		buildingName = "n/a";
 		floorNum = -1;
 		roomNum = -1;
-		gradYear = -1;
-		major = "n/a";
-	}
-
-	public int getStudentId() {
-		return studentID;
-	}
-
-	public void setStudentId(int Studentid) {
-		this.studentID = Studentid;
-	}
-	
-	public int getRedId() {
-		return resAdID;
-	}
-
-	public void setResId(int resid) {
-		this.resAdID = resid;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
+		st = new Student();
 	}
 
 	public int getBuildingID() {
@@ -80,20 +52,21 @@ public class ResidentAdvisor
 	public void setRoomNum(int roomNum) {
 		this.roomNum = roomNum;
 	}
+
+	public int getResAdID() {
+		return resAdID;
+	}
+
+	public void setResAdID(int resAdID) {
+		this.resAdID = resAdID;
+	}
 	
-	public int getGradYear() {
-		return gradYear;
+	public Student getStudent() {
+		return st;
 	}
 
-	public void setGradYear(int gradYear) {
-		this.gradYear = gradYear;
+	public void setStudent(Student st) {
+		this.st = st;
 	}
 
-	public String getMajor() {
-		return major;
-	}
-
-	public void setMajor(String major) {
-		this.major = major;
-	}
 }

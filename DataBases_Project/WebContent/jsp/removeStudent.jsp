@@ -11,12 +11,12 @@
 	<a href="../index.jsp">Home</a><br> <br>
 	
 	<form id="RemoveStudent" action="../RemoveStudent" method="POST">
-		<jsp:useBean id="sg" class="utils.StudentGetter"/>
-		<c:set var="map" value="${sg.getMap()}"/>
+		<jsp:useBean id="sdao" class="utils.StudentDAO"/>
+		<c:set var="studentList" value="${sdao.getStudents()}"/>
 		<select name="students">
 			<option value=0></option>
-			<c:forEach items="${map}" var="entry">
-				<option value= "${entry.key}" >${entry.value}</option>
+			<c:forEach items="${studentList}" var="s">
+				<option value= "${s.studentID}" >${s.firstName} ${s.lastName}</option>
 			</c:forEach>
 		</select>
 		<input type="submit" value="Remove"/><br>
